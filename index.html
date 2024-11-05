@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Form</title>
+</head>
+<body>
+
+<h1>Upload Your File</h1>
+
+<!-- Form that sends data to Formspree for processing -->
+<form action="https://formspree.io/f/xbljorpj" method="POST" enctype="multipart/form-data">
+    <!-- Hidden field to specify the next page after submission (Thank You Page) -->
+    <input type="hidden" name="_next" value="https://your-github-pages-url.com/thank-you">
+    <input type="hidden" name="_subject" value="New Submission from GitHub Pages">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="file">Choose a file:</label>
+    <input type="file" id="file" name="file" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
